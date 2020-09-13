@@ -46,7 +46,7 @@ export const RegularText = styled.Text`
   font-family: Arvo_400Regular;
   font-size: 16px;
   margin-top: 6px;
-  color: #1e1849;
+  color: #3f3b66;
 `;
 
 export const Legend = styled.Text`

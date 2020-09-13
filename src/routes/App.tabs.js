@@ -1,7 +1,7 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import BottomTabButton from '../components/BottomTabButton'
 import Home from '../pages/Home'
+import Reserves from '../pages/Reserves'
 import { FontAwesome5 } from '@expo/vector-icons'
 
 const { Navigator, Screen } = createBottomTabNavigator()
@@ -11,8 +11,6 @@ const AppTabs = () => (
     tabBarOptions={{
       showLabel: false,
       style: {
-        elevation: 0,
-        shadowOpacity: 0,
         height: 54
       },
       tabStyle: {
@@ -24,11 +22,6 @@ const AppTabs = () => (
         flex: 0,
         width: 20,
         height: 20
-      },
-      labelStyle: {
-        fontFamily: 'Arvo_700Bold',
-        fontSize: 14,
-        marginLeft: 16
       },
       inactiveBackgroundColor: '#FAFAFC',
       activeBackgroundColor: '#EBEBF5',
@@ -61,7 +54,7 @@ const AppTabs = () => (
           />
         )
       }}
-      component={Home}
+      component={Reserves}
     />
     <Screen 
       name="QRCode"
