@@ -79,7 +79,7 @@ export const TextField = styled.TextInput.attrs({
   border: ${(props) => (props.error ? '2px solid #ad0a0a' : 'none')};
 `;
 
-export const PrimaryButton = styled.TouchableOpacity.attrs({
+const Button = styled.TouchableOpacity.attrs({
   activeOpacity: .85,
 })`
   width: 100%;
@@ -87,7 +87,18 @@ export const PrimaryButton = styled.TouchableOpacity.attrs({
   border-radius: 6px;
   justify-content: center;
   align-items: center;
+`;
+
+export const PrimaryButton = styled(Button)`
   background-color: #f87652;
+`;
+
+export const SecondaryButton = styled(Button)`
+  background-color: #554ab2;
+`;
+
+export const DarkButton = styled(Button)`
+  background-color: #1e1849;
 `;
 
 export const PrimaryButtonText = styled.Text`

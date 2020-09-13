@@ -6,3 +6,9 @@ export const CartTotal = styled.View`
   align-items: flex-end;
   font-size: 18px;
 `
+
+export const Sheet = styled.View`
+  flex: 1;
+  padding: 20px;
+  background-color: #FFF;
+`

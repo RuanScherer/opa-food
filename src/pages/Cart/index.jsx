@@ -1,10 +1,13 @@
 import React from 'react';
 import { ScrollView } from 'react-native'
+import RBSheet from "react-native-raw-bottom-sheet";
 import MenuItem from '../../components/MenuItem';
-import { StaticContainer, Legend, Title, BigNumber, PrimaryButton, PrimaryButtonText } from '../../styles/global';
-import { CartTotal } from './styles'
+import { StaticContainer, Legend, Title, BigNumber, PrimaryButton, PrimaryButtonText, Subtitle, SecondaryButton, DarkButton } from '../../styles/global';
+import { CartTotal, Sheet } from './styles'
 
 const Cart = () => {
+  const refRBSheet = React.useRef();
+
   return (
     <StaticContainer style={{ paddingBottom: 0 }}>
       <Legend>SUA CONTA</Legend>
@@ -33,10 +36,47 @@ const Cart = () => {
         <CartTotal>
           <BigNumber>R$ 144.90</BigNumber>
         </CartTotal>
-        <PrimaryButton style={{ marginVertical: 20 }}>
+        <PrimaryButton style={{ marginVertical: 20 }} onPress={() => refRBSheet.current.open()}>
           <PrimaryButtonText>Pagar a conta</PrimaryButtonText>
         </PrimaryButton>
       </ScrollView>
+
+      <RBSheet
+        ref={refRBSheet}
+        height={400}
+        closeOnDragDown={true}
+        closeOnPressMask={true}
+        customStyles={{
+          wrapper: {
+            backgroundColor: "rgba(0, 0, 0, .3)"
+          },
+          draggableIcon: {
+            backgroundColor: "#aaa"
+          },
+          container: {
+            borderTopRightRadius: 14,
+            borderTopLeftRadius: 14
+          }
+        }}>
+          <Sheet>
+            <Legend style={{ marginBottom: 4}}>TOTAL</Legend>
+            <CartTotal style={{ marginBottom: 10 }}>
+              <BigNumber>R$ 144.90</BigNumber>
+            </CartTotal>
+            <Subtitle style={{ marginVertical: 6, alignSelf: 'center' }}>
+              Escolha a forma de pagamento
+            </Subtitle>
+            <PrimaryButton style={{ marginVertical: 8 }}>
+              <PrimaryButtonText>Cartão de crédito</PrimaryButtonText>
+            </PrimaryButton>
+            <SecondaryButton style={{ marginVertical: 8 }}>
+              <PrimaryButtonText>Cartão de débito</PrimaryButtonText>
+            </SecondaryButton>
+            <DarkButton style={{ marginVertical: 8 }}>
+              <PrimaryButtonText>Vale refeição</PrimaryButtonText>
+            </DarkButton>
+          </Sheet>
+      </RBSheet>
     </StaticContainer>
   );
 }
