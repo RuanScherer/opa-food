@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
 import AppTabs from './App.tabs'
+import Details from '../pages/Details'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -11,6 +12,10 @@ const AppRoutes = () => (
     <Screen 
       name="Register"
       component={Register}
+    />
+    <Screen 
+      name="Details"
+      component={Details}
     />
     <Screen 
       name="Login"
