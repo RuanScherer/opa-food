@@ -1,29 +1,34 @@
 import React from 'react';
-import { ScrollView } from 'react-native'
+import { useNavigation } from '@react-navigation/native'
+import { ScrollView, TouchableOpacity } from 'react-native'
 import { Container, Title, SmallTitle, Form } from '../../styles/global';
 import { Restaurant, ResturantName, ResturantAddress, RestaurantImage, ResturantStats, SearchField } from './styles'
 
 const Home = () => {
+  const { navigate } = useNavigation()
   return (
     <Container>
       <Title>Descobrir</Title>
       <Form>
-        <SearchField placeholder="Pesquisar restaurante" style={{ width: '100%' }}/>
+        <SearchField placeholder="Pesquisar restaurante" style={{ width: '100%' }} />
       </Form>
       <SmallTitle style={{ marginTop: 10 }}>Mais populares</SmallTitle>
       <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-        <Restaurant>
-          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
-          <ResturantName>Gutes Essen</ResturantName>
-          <ResturantAddress>
-            R. Mal. Deodoro, 202{'\n'}
+        <TouchableOpacity onPress={() => navigate("Details")}>
+
+          <Restaurant>
+            <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }} />
+            <ResturantName>Gutes Essen</ResturantName>
+            <ResturantAddress>
+              R. Mal. Deodoro, 202{'\n'}
             Velha, Blumenau - SC
           </ResturantAddress>
-          <ResturantStats open={true}>Aberto agora</ResturantStats>
-        </Restaurant>
+            <ResturantStats open={true}>Aberto agora</ResturantStats>
+          </Restaurant>
+        </TouchableOpacity>
 
         <Restaurant>
-          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
+          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }} />
           <ResturantName>Blu Pizzas</ResturantName>
           <ResturantAddress>
             R. 7 de Setembro, 2070{'\n'}
@@ -33,7 +38,7 @@ const Home = () => {
         </Restaurant>
 
         <Restaurant>
-          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
+          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }} />
           <ResturantName>Chef Waldemar</ResturantName>
           <ResturantAddress>
             R. Bolívia, 411{'\n'}
@@ -43,7 +48,7 @@ const Home = () => {
         </Restaurant>
 
         <Restaurant>
-          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
+          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }} />
           <ResturantName>Burger King</ResturantName>
           <ResturantAddress>
             R. 7 de Setembro, 1953{'\n'}
@@ -51,9 +56,9 @@ const Home = () => {
           </ResturantAddress>
           <ResturantStats open={true}>Aberto agora</ResturantStats>
         </Restaurant>
-        
+
         <Restaurant>
-          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
+          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }} />
           <ResturantName>Gutes Essen</ResturantName>
           <ResturantAddress>
             R. Mal. Deodoro, 202{'\n'}
