@@ -1,9 +1,9 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Reservations from '../pages/Reservations'
 import { FontAwesome5 } from '@expo/vector-icons'
 import Menu from '../pages/Menu'
 import Waiting from '../pages/Waiting'
+import Cart from '../pages/Cart'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
@@ -68,7 +68,7 @@ const RestaurantTabs = () => (
           />
         )
       }}
-      component={Reservations}
+      component={Cart}
     />
   </Navigator>
 );

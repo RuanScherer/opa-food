@@ -16,10 +16,7 @@ export const Container = styled.ScrollView.attrs({
 })`
   flex: 1;
   background-color: #F3F3F3;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 20px;
 `;
 
 export const Title = styled.Text`
