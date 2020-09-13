@@ -16,10 +16,7 @@ export const Container = styled.ScrollView.attrs({
 })`
   flex: 1;
   background-color: #F3F3F3;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding: 30px 20px;
 `;
 
 export const Title = styled.Text`
@@ -46,14 +43,14 @@ export const RegularText = styled.Text`
   font-family: Arvo_400Regular;
   font-size: 16px;
   margin-top: 6px;
-  color: #1e1849;
+  color: #3f3b66;
 `;
 
 export const Legend = styled.Text`
   font-family: Arvo_700Bold;
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
-  color: ${(props) => props.color || '#8974c2'};
+  color: ${(props) => props.color || '#554ab2'};
 `;
 
 export const BigNumber = styled.Text`

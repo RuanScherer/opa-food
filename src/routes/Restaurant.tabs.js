@@ -1,13 +1,13 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Home from '../pages/Home'
-import Reservations from '../pages/Reservations'
 import { FontAwesome5 } from '@expo/vector-icons'
-import Scan from '../pages/Scan'
+import Menu from '../pages/Menu'
+import Waiting from '../pages/Waiting'
+import Cart from '../pages/Cart'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
-const AppTabs = () => (
+const RestaurantTabs = () => (
   <Navigator
     tabBarOptions={{
       showLabel: false,
@@ -31,46 +31,46 @@ const AppTabs = () => (
     }
   }>
     <Screen 
-      name="Home"
+      name="Menu"
       options={{
         tabBarLabel: '',
         tabBarIcon: ({ color, size, focused }) => (
           <FontAwesome5 
-            name="home"
+            name="th-list"
             size={size}
             color={focused ? '#554ab2' : color}
           />
         )
       }}
-      component={Home}
+      component={Menu}
     />
     <Screen 
-      name="Reservations"
+      name="Waiting"
       options={{
         tabBarIcon: ({ color, size, focused }) => (
           <FontAwesome5 
-            name="clipboard-list"
+            name="hourglass-start"
             size={size}
             color={focused ? '#554ab2' : color}
           />
         )
       }}
-      component={Reservations}
+      component={Waiting}
     />
     <Screen 
-      name="QRCode"
+      name="Cart"
       options={{
         tabBarIcon: ({ color, size, focused }) => (
           <FontAwesome5 
-            name="qrcode"
+            name="shopping-cart"
             size={size}
             color={focused ? '#554ab2' : color}
           />
         )
       }}
-      component={Scan}
+      component={Cart}
     />
   </Navigator>
 );
 
-export default AppTabs
+export default RestaurantTabs

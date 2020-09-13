@@ -4,6 +4,8 @@ import Login from '../pages/Login'
 import Register from '../pages/Register'
 import AppTabs from './App.tabs'
 import Details from '../pages/Details'
+import RestaurantTabs from './Restaurant.tabs'
+import MenuItem from '../pages/MenuItem'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -24,6 +26,14 @@ const AppRoutes = () => (
     <Screen 
       name="Home"
       component={AppTabs}
+    />
+    <Screen 
+      name="Restaurant"
+      component={RestaurantTabs}
+    />
+    <Screen 
+      name="MenuItem"
+      component={MenuItem}
     />
   </Navigator>
 )
