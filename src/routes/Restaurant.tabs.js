@@ -1,13 +1,13 @@
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import Home from '../pages/Home'
 import Reservations from '../pages/Reservations'
 import { FontAwesome5 } from '@expo/vector-icons'
 import Scan from '../pages/Scan'
+import Menu from '../pages/Menu'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
-const AppTabs = () => (
+const RestaurantTabs = () => (
   <Navigator
     tabBarOptions={{
       showLabel: false,
@@ -31,38 +31,25 @@ const AppTabs = () => (
     }
   }>
     <Screen 
-      name="Home"
+      name="Menu"
       options={{
         tabBarLabel: '',
         tabBarIcon: ({ color, size, focused }) => (
           <FontAwesome5 
-            name="home"
+            name="th-list"
             size={size}
             color={focused ? '#554ab2' : color}
           />
         )
       }}
-      component={Home}
+      component={Menu}
     />
     <Screen 
-      name="Reservations"
+      name="Waiting"
       options={{
         tabBarIcon: ({ color, size, focused }) => (
           <FontAwesome5 
-            name="clipboard-list"
-            size={size}
-            color={focused ? '#554ab2' : color}
-          />
-        )
-      }}
-      component={Reservations}
-    />
-    <Screen 
-      name="QRCode"
-      options={{
-        tabBarIcon: ({ color, size, focused }) => (
-          <FontAwesome5 
-            name="qrcode"
+            name="hourglass-start"
             size={size}
             color={focused ? '#554ab2' : color}
           />
@@ -70,7 +57,20 @@ const AppTabs = () => (
       }}
       component={Scan}
     />
+    <Screen 
+      name="Cart"
+      options={{
+        tabBarIcon: ({ color, size, focused }) => (
+          <FontAwesome5 
+            name="shopping-cart"
+            size={size}
+            color={focused ? '#554ab2' : color}
+          />
+        )
+      }}
+      component={Reservations}
+    />
   </Navigator>
 );
 
-export default AppTabs
+export default RestaurantTabs

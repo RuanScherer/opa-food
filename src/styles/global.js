@@ -51,9 +51,9 @@ export const RegularText = styled.Text`
 
 export const Legend = styled.Text`
   font-family: Arvo_700Bold;
-  font-size: 10px;
+  font-size: 14px;
   text-transform: uppercase;
-  color: ${(props) => props.color || '#8974c2'};
+  color: ${(props) => props.color || '#554ab2'};
 `;
 
 export const BigNumber = styled.Text`
