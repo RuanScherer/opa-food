@@ -1,6 +1,6 @@
 import React from 'react';
-import { View } from 'react-native'
-import { Container, Form, Title, SmallTitle } from '../../styles/global';
+import { ScrollView } from 'react-native'
+import { Container, Title, SmallTitle, Form } from '../../styles/global';
 import { Restaurant, ResturantName, ResturantAddress, RestaurantImage, ResturantStats, SearchField } from './styles'
 
 const Home = () => {
@@ -8,10 +8,10 @@ const Home = () => {
     <Container>
       <Title>Descobrir</Title>
       <Form>
-        <SearchField placeholder="Pesquisar restaurante"/>
+        <SearchField placeholder="Pesquisar restaurante" style={{ width: '100%' }}/>
       </Form>
       <SmallTitle style={{ marginTop: 10 }}>Mais populares</SmallTitle>
-      <View style={{ flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-between' }}>
+      <ScrollView horizontal showsHorizontalScrollIndicator={false}>
         <Restaurant>
           <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
           <ResturantName>Gutes Essen</ResturantName>
@@ -21,6 +21,7 @@ const Home = () => {
           </ResturantAddress>
           <ResturantStats open={true}>Aberto agora</ResturantStats>
         </Restaurant>
+
         <Restaurant>
           <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
           <ResturantName>Blu Pizzas</ResturantName>
@@ -30,6 +31,7 @@ const Home = () => {
           </ResturantAddress>
           <ResturantStats open={false}>Fechado</ResturantStats>
         </Restaurant>
+
         <Restaurant>
           <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
           <ResturantName>Chef Waldemar</ResturantName>
@@ -39,6 +41,7 @@ const Home = () => {
           </ResturantAddress>
           <ResturantStats open={false}>Fechado</ResturantStats>
         </Restaurant>
+
         <Restaurant>
           <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
           <ResturantName>Burger King</ResturantName>
@@ -48,7 +51,17 @@ const Home = () => {
           </ResturantAddress>
           <ResturantStats open={true}>Aberto agora</ResturantStats>
         </Restaurant>
-      </View>
+        
+        <Restaurant>
+          <RestaurantImage source={{ uri: "https://10619-2.s.cdn12.com/rests/small/w312/h280/403_69233392.jpg" }}/>
+          <ResturantName>Gutes Essen</ResturantName>
+          <ResturantAddress>
+            R. Mal. Deodoro, 202{'\n'}
+            Velha, Blumenau - SC
+          </ResturantAddress>
+          <ResturantStats open={true}>Aberto agora</ResturantStats>
+        </Restaurant>
+      </ScrollView>
     </Container>
   );
 }

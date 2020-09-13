@@ -2,7 +2,7 @@ import React from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
 import Login from '../pages/Login'
 import Register from '../pages/Register'
-import Home from '../pages/Home'
+import AppTabs from './App.tabs'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -18,7 +18,7 @@ const AppRoutes = () => (
     />
     <Screen 
       name="Home"
-      component={Home}
+      component={AppTabs}
     />
   </Navigator>
 )

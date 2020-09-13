@@ -6,11 +6,8 @@ export const SearchField = styled(TextField)`
 `
 
 export const Restaurant = styled.View`
-  border: 1px solid #E5E5E5;
-  padding: 14px;
-  border-radius: 10px;
-  width: 48%;
-  margin-bottom: 14px;
+  width: 240px;
+  margin-right: 20px;
 `
 
 export const ResturantName = styled(Subtitle)`
@@ -22,7 +19,10 @@ export const ResturantAddress = styled(RegularText)`
 `
 
 export const RestaurantImage = styled.Image`
-  width: 100%
+  width: 100%;
+  height: 240px;
+  border-radius: 10px;
+  margin-bottom: 10px;
 `
 
 export const ResturantStats = styled(RegularText)`
