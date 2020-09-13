@@ -2,8 +2,8 @@ import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import Reservations from '../pages/Reservations'
 import { FontAwesome5 } from '@expo/vector-icons'
-import Scan from '../pages/Scan'
 import Menu from '../pages/Menu'
+import Waiting from '../pages/Waiting'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
@@ -55,7 +55,7 @@ const RestaurantTabs = () => (
           />
         )
       }}
-      component={Scan}
+      component={Waiting}
     />
     <Screen 
       name="Cart"

@@ -4,7 +4,7 @@ import { View } from 'react-native'
 import { RegularNumber, RegularText, Subtitle } from '../../styles/global'
 import { Box, ItemImage } from './styles'
 
-const MenuItem = ({ name, description, price, imageUrl }) => {
+const MenuItem = ({ name, description, price, count, imageUrl }) => {
   const { navigate } = useNavigation()
   
   return (
@@ -13,7 +13,8 @@ const MenuItem = ({ name, description, price, imageUrl }) => {
       <View style={{ width: '70%', padding: 10 }}>
         <Subtitle>{name}</Subtitle>
         <RegularText>{description}</RegularText>
-        <RegularNumber>R$ {price.toFixed(2)}</RegularNumber>
+        { price && <RegularNumber>R$ {price.toFixed(2)}</RegularNumber> }
+        { count && <RegularNumber>{count}x</RegularNumber> }
       </View>
     </Box>
   );
