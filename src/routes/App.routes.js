@@ -4,6 +4,7 @@ import Login from '../pages/Login'
 import Register from '../pages/Register'
 import AppTabs from './App.tabs'
 import Details from '../pages/Details'
+import Reserve from '../pages/Reserve'
 import RestaurantTabs from './Restaurant.tabs'
 import MenuItem from '../pages/MenuItem'
 
@@ -34,6 +35,10 @@ const AppRoutes = () => (
     <Screen 
       name="MenuItem"
       component={MenuItem}
+    />
+    <Screen 
+      name="Reserve"
+      component={Reserve}
     />
   </Navigator>
 )

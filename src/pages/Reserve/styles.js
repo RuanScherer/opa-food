@@ -26,9 +26,8 @@ export const ResturantName = styled(Subtitle)`
 
 export const ResturantAddress = styled(RegularText)`
   font-size: 16px;
-`
-export const ResturantHourOpened = styled(RegularText)`
-  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 20px;
 `
 
 export const RestaurantImage = styled.Image`
@@ -36,10 +35,4 @@ export const RestaurantImage = styled.Image`
   height: 240px;
   border-radius: 10px;
   margin-bottom: 10px;
-`
-export const ResturantStats = styled(RegularText)`
-  font-size: 14px;
-  color: ${props => props.open ? "#2ede21" : "#de2121" };
-  font-weight: bold;
-  margin-bottom: 20px;
 `
