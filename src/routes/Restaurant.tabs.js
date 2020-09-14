@@ -4,32 +4,12 @@ import { FontAwesome5 } from '@expo/vector-icons'
 import Menu from '../pages/Menu'
 import Waiting from '../pages/Waiting'
 import Cart from '../pages/Cart'
+import bottomTabsConfig from '../config/bottomTabs'
 
 const { Navigator, Screen } = createBottomTabNavigator()
 
 const RestaurantTabs = () => (
-  <Navigator
-    tabBarOptions={{
-      showLabel: false,
-      style: {
-        height: 54
-      },
-      tabStyle: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'center'
-      },
-      iconStyle: {
-        flex: 0,
-        width: 20,
-        height: 20
-      },
-      inactiveBackgroundColor: '#FAFAFC',
-      activeBackgroundColor: '#EBEBF5',
-      inactiveTintColor: '#C1BCCC',
-      activeTintColor: '#554ab2'
-    }
-  }>
+  <Navigator tabBarOptions={bottomTabsConfig}>
     <Screen 
       name="Menu"
       options={{
