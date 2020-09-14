@@ -24,7 +24,7 @@ const Login = () => {
         </TouchableOpacity>
         <PrimaryButton onPress={() => navigate("Home")}>
           <PrimaryButtonText>
-            Entrar
+            Cadastrar-se
           </PrimaryButtonText>
         </PrimaryButton>
       </Form>
