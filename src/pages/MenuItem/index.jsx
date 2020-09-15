@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React, { useState } from 'react';
-import { PrimaryButton, PrimaryButtonText, RegularText, Container, Title } from '../../styles/global';
+import { PrimaryButton, PrimaryButtonText, RegularText, Container, Title, TextField } from '../../styles/global';
 import { ItemImage, CounterBox, CounterButton } from './styles'
 import { FontAwesome5 } from '@expo/vector-icons'
 import { TouchableOpacity } from 'react-native';
@@ -26,6 +26,12 @@ const MenuItem = () => {
       <ItemImage source={{ uri: "https://acconstorage.blob.core.windows.net/acconpictures/15909721793275905880963504793-1080p.jpg" }}/>
       <Title style={{ marginBottom: 0 }}>Pizza Grande</Title>
       <RegularText>35cm, 12 fatias.</RegularText>
+      <TextField
+        placeholder="Alguma observação?"
+        style={{ marginVertical: 20 }}
+        numberOfLines={3}
+        textAlignVertical="top"
+      />
       <CounterBox>
         <CounterButton onPress={decrease}>
           <FontAwesome5 name="minus" color="#FFF" size={10}/>

@@ -13,7 +13,6 @@ export const CounterBox = styled.View`
   align-self: flex-end;
   flex-direction: row;
   align-items: center;
-  margin-top: 10px;
 `
 
 export const CounterButton = styled(PrimaryButton)`
