@@ -7,6 +7,7 @@ import Details from '../pages/Details'
 import Reserve from '../pages/Reserve'
 import RestaurantTabs from './Restaurant.tabs'
 import MenuItem from '../pages/MenuItem'
+import PaymentSuccess from '../pages/PaymentSuccess'
 
 const { Navigator, Screen } = createStackNavigator()
 
@@ -39,6 +40,10 @@ const AppRoutes = () => (
     <Screen 
       name="Reserve"
       component={Reserve}
+    />
+    <Screen 
+      name="PaymentSuccess"
+      component={PaymentSuccess}
     />
   </Navigator>
 )

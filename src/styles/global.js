@@ -23,7 +23,7 @@ export const Title = styled.Text`
   font-family: Arvo_700Bold;
   font-size: 34px;
   margin-bottom: 22px;
-  color: #1e1849;
+  color: ${props => props.color || '#1e1849'};
 `;
 
 export const SmallTitle = styled.Text`
@@ -36,14 +36,14 @@ export const SmallTitle = styled.Text`
 export const Subtitle = styled.Text`
   font-family: Arvo_700Bold;
   font-size: 18px;
-  color: #1e1849;
+  color: ${props => props.color || '#1e1849'};
 `;
 
 export const RegularText = styled.Text`
   font-family: Arvo_400Regular;
   font-size: 16px;
   margin-top: 6px;
-  color: #3f3b66;
+  color: ${props => props.color || '#3f3b66'};
 `;
 
 export const Legend = styled.Text`

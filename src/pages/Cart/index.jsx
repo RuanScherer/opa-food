@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { ScrollView } from 'react-native'
 import RBSheet from "react-native-raw-bottom-sheet";
@@ -6,7 +7,8 @@ import { StaticContainer, Legend, Title, BigNumber, PrimaryButton, PrimaryButton
 import { CartTotal, Sheet } from './styles'
 
 const Cart = () => {
-  const refRBSheet = React.useRef();
+  const refRBSheet = React.useRef()
+  const { navigate } = useNavigation()
 
   return (
     <StaticContainer style={{ paddingBottom: 0 }}>
@@ -63,16 +65,17 @@ const Cart = () => {
             <CartTotal style={{ marginBottom: 10 }}>
               <BigNumber>R$ 144.90</BigNumber>
             </CartTotal>
+
             <Subtitle style={{ marginVertical: 6, alignSelf: 'center' }}>
               Escolha a forma de pagamento
             </Subtitle>
-            <PrimaryButton style={{ marginVertical: 8 }}>
+            <PrimaryButton style={{ marginVertical: 8 }} onPress={() => navigate("PaymentSuccess")}>
               <PrimaryButtonText>Cartão de crédito</PrimaryButtonText>
             </PrimaryButton>
-            <SecondaryButton style={{ marginVertical: 8 }}>
+            <SecondaryButton style={{ marginVertical: 8 }} onPress={() => navigate("PaymentSuccess")}>
               <PrimaryButtonText>Cartão de débito</PrimaryButtonText>
             </SecondaryButton>
-            <DarkButton style={{ marginVertical: 8 }}>
+            <DarkButton style={{ marginVertical: 8 }} onPress={() => navigate("PaymentSuccess")}>
               <PrimaryButtonText>Vale refeição</PrimaryButtonText>
             </DarkButton>
           </Sheet>
